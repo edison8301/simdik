@@ -1,17 +1,27 @@
 <?php
 
+use yii\helpers\Html;
+
 /* @var $this yii\web\View */
 
 $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
 
-    <div class="jumbotron">
+    <div class="jumbotron" style="margin-bottom:0px">
         <h1>Congratulations!</h1>
 
         <p class="lead">You have successfully created your Yii-powered application.</p>
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+    </div>
+
+    <div class="row" style="margin-bottom: 60px; text-align: center">
+        <div class="col-lg-12">
+            <?= Html::a('Home',['site/index'],['class'=>'btn btn-success']); ?>
+            <?= Html::a('About',['site/about'],['class'=>'btn btn-primary']); ?>
+            <?= Html::a('Contact',['site/contact'],['class'=>'btn btn-warning']); ?>
+            <?= Html::a('Login',['site/login'],['class'=>'btn btn-danger']); ?>
+        </div>
     </div>
 
     <div class="body-content">
